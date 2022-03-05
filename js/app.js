@@ -167,7 +167,7 @@ async function checkEns() {
           </div>
         `
         setTimeout(() => {
-          addOutcome.style.display = "none"
+          addOutcome1.style.display = "none"
         }, 5000);
     }
 
