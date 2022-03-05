@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forte3</title>
+    <!-- Moralis SDK Code  -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- nav display -->
+    <nav class="nav">
+        <div class="navCenter">
+            <div class="navHeader">
+                <div class="logoBox">
+                    <img src="./images/LogoMakr.png" alt="logo">
+                </div>
+
+                <div class="login">
+                    <button class="loginBtn">Login</button>
+                    <div class="logout">
+                        <button class="logoutBtn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end of nav -->
+
+
+    <!-- hero container -->
+    <div class="hero">
+        <div class="heroCenter">
+            <article class="heroInfo">
+                <h1>
+                    Exploring the Possibilites<br>of <span>crypto transfers</span> with Moralis<br>
+
+                </h1>
+                <p>
+                    With Forte3, you can transfer your native ether, ERC20 tokens, check your NFTs and Ethereum Name
+                    Service.
+                </p>
+                <a href="#token" class="btn">Send Tokens Now</a>
+            </article>
+
+            <div class="sendContainer">
+                <div class="sendContent">
+                    <h4>Send Ether</h4>
+                    <div class="sendForm">
+                        <div>
+                            <input type="text" name="address" id="address" placeholder="Input valid Address" required>
+                        </div>
+                        <div>
+                            <input type="number" name="amount" id="amount" placeholder="Enter Amount" required>
+                        </div>
+                        <div>
+                            <button class="sendBtn" id="sendBtn">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of hero container -->
+    <section id="token" class="token">
+        <div class="tokenCenter">
+            <div class="tokenHeader">
+                <h2>Token transfer made easy with <span>Forte3</span></h2>
+                <p>When sending an ERC20, Forte3 needs to know the contract address of the token and the number of
+                    decimals.</p>
+            </div>
+        </div>
+
+        <div class="erc20Form">
+            <div class="erc20FormCenter">
+                <div class="sendContent">
+                    <h4>Send ERC20 Token</h4>
+                    <div class="sendERCToken">
+                        <div>
+                            <input type="text" name="address2" id="address2" placeholder="Input valid address" required>
+                        </div>
+                        <div>
+                            <input type="number" name="decimal" id="decimal" placeholder="Input valid decimal" required>
+                        </div>
+                        <div>
+                            <input type="text" name="contractAddr" id="contractAddr"
+                                placeholder="Input valid contract address" required>
+                        </div>
+                        <div>
+                            <input type="number" name="amount2" id="amount2" placeholder="Enter Amount" required>
+                        </div>
+                        <div>
+                            <input type="submit" value="Send" class="sendBtn2" id="sendBtn2" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="checkNfts">
+        <div class="checkNftCenter">
+            <div class="checkNftHeader">
+                <h2>NFT at a glance with <span>Forte3</span></h2>
+                <p>Ethereum gave creators new tools to monetize their work. One tool stands out in particular: the NFT.
+                    A digital certificate representing ownership of any digital file, ranging from art, music,
+                    photography, videos, or game items. During 2021, platforms like OpenSea, Rarible, Foundation, Zora,
+                    and Mirror enabled artists to create, sell, and trade NFTs.</p>
+            </div>
+
+            <div class="NftChecker">
+                <div class="NftForm">
+                    <div>
+                        <input type="text" name="address" id="address3" placeholder="Input valid address">
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit" id="submitNft">
+                    </div>
+                </div>
+
+                <div class="addOutcome">
+                    <!-- <div class="outCome">
+                        <p>No Nfts</p>
+                        <p>Buy on these platforms <a href="https://opensea.io">Opensea</a>, <a href="https://rarible.com">Rarible</a> </p>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+        <div class="checkNftCenter checkNftCenter1">
+            <div class="NftChecker NftChecker1">
+                <div class="NftForm">
+                    <div>
+                        <input type="text" name="address" id="addressEns" placeholder="Input valid address">
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit" id="EnsSubmit">
+                    </div>
+                </div>
+
+                <div class="addOutcome1">
+                    <!-- <div class="outCome">
+                        <p>No Nfts</p>
+                        <p>Buy on these platforms <a href="https://opensea.io">Opensea</a>, <a href="https://rarible.com">Rarible</a> </p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="checkNftHeader">
+                <h2>ENS Check made easy with <span>Forte3</span></h2>
+                <p>ENS is a decentralized naming protocol that lets users create simple usernames (yourname.eth) which
+                    can be used as Ethereum accounts, to receive non-ETH crypto (including Bitcoin).</p>
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+
+    <footer>
+        <div class="footerCenter">
+            <p>Copyright &copy; 2022. WAGMI &#10024; <code>AyDeveloper</code>&#128640;</p>
+        </div>
+    </footer>
+    <!-- customm js -->
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

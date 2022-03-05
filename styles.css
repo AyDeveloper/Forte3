@@ -1,0 +1,533 @@
+/* font import  */
+@font-face {
+    font-family: inter;
+    src: url(./font/inter/Inter-upright-var.woff2);
+}
+
+/*global style*/
+body {
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    font: inter;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    background: transparent;
+}
+
+.navCenter {
+    position: relative;
+    width: 90%;
+    margin: .1px auto;
+}
+
+.navHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.navHeader .logoBox {
+    width: 100px;
+    height: 50px;
+    /* margin-left: 1.5rem; */
+}
+
+.logoBox img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.login button {
+    width: 80px;
+    text-align: center;
+    white-space:pre-line;
+    overflow:hidden;
+    padding: 10px;
+    color: #325488;
+    border: 1px solid #f3f3f3;
+    border-radius: 18px;
+    cursor: pointer;
+    outline: none;
+    font-size: 11px;
+}
+
+.login .loginBtn.remove {
+    display: none;
+}
+
+.logout .logoutBtn {
+    display: none;
+    margin-top: 3px;
+    transition: all 0.5 ease-in;
+}
+
+.logout .logoutBtn.disp {
+    display: block !important;
+}
+
+
+
+.hero {
+    position: relative;
+    min-height: 170vh;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 200vh;
+    background: hsla(224, 68%, 7%, 1);
+    background: linear-gradient(45deg, #060c1e 10%, hsla(233, 41%, 27%, 1) 100%);
+    background: -moz-linear-gradient(45deg, hsla(224, 68%, 7%, 1) 10%, hsla(233, 41%, 27%, 1) 100%);
+    background: -webkit-linear-gradient(45deg, hsla(224, 68%, 7%, 1) 10%, hsla(233, 41%, 27%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#060D20", endColorstr="#293062", GradientType=1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    margin-top: -7.2rem;
+}
+
+.heroCenter {
+    width: 90%;
+    max-width: 1170px;
+    margin: .1px auto;
+    margin-top: 1rem;
+    display: grid;
+    align-items: center;
+    padding: 0px 10px;
+    z-index: 99;
+}
+
+.heroInfo h1 {
+    font-size: 2.8rem;
+    text-transform: capitalize;
+    color: #325488;
+    line-height: 4rem;
+    letter-spacing: 3.5px;
+    margin-bottom: 1.5rem;
+}
+
+.heroInfo h1 span {
+    background: -webkit-linear-gradient(#325488, #121b41);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heroInfo p {
+    color: #f3f3f3;
+    opacity: .8;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.heroInfo .btn {
+    display: inline-block;
+    position: relative;
+    padding: 18px 30px;
+    background: transparent;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+    color: #f3f3f3;
+    opacity: .8;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.heroInfo .btn:hover {
+    border-color: transparent;
+    color: #fff;
+}
+
+.heroInfo .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #325488, #28446ed5);
+    z-index: -1;
+    transition: transform .5s;
+    transform-origin: right;
+    transform: scaleX(0);
+    border-radius: 5px;
+}
+
+.heroInfo .btn:hover::before {
+    transition: transform .5s;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.sendContainer {
+    width: 100%;
+    max-width: 500px;
+    margin: .1px auto;
+    height: 400px;
+    background-color: #f3f3f3;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0px 7px 8px rgba(0,0,0,0.32);
+    margin-top: 3rem;
+}
+
+.sendContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sendContent h4 {
+    text-align: center;
+    background: -webkit-linear-gradient(#325488, #121b41);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.sendForm {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 40px;
+    place-items: center;
+}
+
+.sendForm input {
+    padding: 10px 30px;
+    border: 1px solid #e9dada;
+    border-radius: 8px;
+    color: #325488;
+    outline: none;
+    transition: all 0.3s ease-in;
+}
+
+.sendForm input:focus, .sendForm input:hover {
+    border: 1px solid #325488;
+}
+
+
+.sendForm .sendBtn {
+    display: inline-block;
+    position: relative;
+    padding: 12px 85px;
+    background: transparent;
+    border: 1px solid #325488;
+    border-radius: 5px;
+    color: #325488;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+}
+
+.sendForm .sendBtn:hover,
+.sendERCToken .sendBtn2:hover {
+    background-color:  #325488;
+    border: transparent;
+    color: #fff;
+}
+
+
+/*styles for desktop version*/
+@media screen and (min-width:1200px) {
+    .navCenter {
+        padding-top: 1rem;
+    }
+    .navHeader {
+        padding-top: 0px;
+    }
+
+    .navHeader .logoBox {
+        width: 150px;
+        margin-left: 1.5rem;
+    }
+
+    .Login button {
+        width: unset;
+        padding: 8px 25px;
+        font-size: 15px;
+    }
+
+    .login .loginBtn {
+        width: unset;
+        font-size: 15px;
+    }
+    .login .logoutBtn {
+        width: unset;
+        font-size: 15px;
+    }
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero::before {
+        background-size: contain;
+        min-height: 120vh;
+    }
+
+    .heroCenter {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 5rem;
+    }
+
+    .heroInfo {
+        margin-top: 3.5rem;
+    }
+
+    .heroInfo h1 {
+        font-size: 4.3rem;
+        line-height: 5.4rem;
+        letter-spacing: 1px;
+    }
+
+    .heroInfo p {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+        margin-bottom: 1.7rem;
+    }
+
+}
+
+.token {
+    padding: 50px 0 20px;
+    min-height: 50vh;
+    background-image: url("https://cdn.pixabay.com/photo/2020/01/26/11/46/paper-flower-background-4794429_1280.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    /* background-color: #060c1e; */
+}
+
+.tokenCenter {
+    width: 90%;
+    margin: .1px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tokenHeader {
+    text-align: center;
+}
+.tokenHeader h2 {
+    font-size: 1.8rem;
+    color: #060c1ee0;
+}
+
+.tokenHeader h2 span {
+    background: -webkit-linear-gradient(#325488, #121b41);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+}
+.tokenHeader p {
+    padding-top: 20px;
+}
+
+.erc20Form {
+    padding: 40px 0 20px;
+}
+
+.erc20FormCenter {
+    max-width: 850px;
+    height: 600px;
+    padding: 30px 0;
+    width: 90%;
+    margin: .1px auto;
+    /* background: #060c1e88; */
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px;
+}
+
+.sendERCToken {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: .1px auto;
+}
+
+
+.sendERCToken div {
+    width: 300px;
+    max-width: 80%;
+    padding: 10px 0;
+}
+
+
+@media screen and (min-width:1200px) {
+    .sendERCToken div {
+        width: 600px;
+    }
+}
+.sendERCToken input[type="text"],
+.sendERCToken input[type="number"] {
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #f3f3f3;
+    outline: none;
+}
+
+.sendERCToken input[type ="submit"] {
+    color:#060c1e;
+    border: 1px solid #325488;
+}
+
+
+.sendBtn2 {
+    width: 100%;
+    padding: 18px 10px;
+    color: #f3f3f3;
+    cursor: pointer;
+}
+
+.checkNfts {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkNftCenter {
+    width: 90%;
+    margin: .1px auto;
+}
+
+.checkNftHeader h2 {
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+    color: #060c1ee0;
+}
+
+.checkNftHeader h2 span {
+    background: -webkit-linear-gradient(#325488, #121b41);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+}
+
+.checkNftHeader p {
+    line-height: 25px;
+    padding-bottom: 10px;
+}
+
+.NftChecker {
+    padding: 40px 25px;
+    background: hsla(224, 68%, 7%, 1);
+    background: linear-gradient(45deg, #060c1e 10%, hsla(233, 41%, 27%, 1) 100%);
+    background: -moz-linear-gradient(45deg, hsla(224, 68%, 7%, 1) 10%, hsla(233, 41%, 27%, 1) 100%);
+    background: -webkit-linear-gradient(45deg, hsla(224, 68%, 7%, 1) 10%, hsla(233, 41%, 27%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#060D20", endColorstr="#293062", GradientType=1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 18px;
+    /* height: 250px; */
+    max-width: 400px;
+    width:95%;
+    margin: .1px auto;
+}
+
+.NftForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.NftForm input {
+    width: 100%;
+    padding: 12px 8px;
+    border: 1px solid #f3f3f3;
+    outline: none;
+}
+
+.NftChecker input[type="submit"] {
+    cursor: pointer;
+}
+
+.outCome {
+    margin-top: 2rem;
+    padding: 5px 12px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+}
+
+.outCome p {
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 0 0;
+}
+
+.outCome p a {
+    color: #060c1e;
+    text-decoration: underline;
+}
+
+
+@media screen and (min-width:1200px) {
+    .checkNftCenter {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .NftChecker {
+        max-width: 550px;
+    }
+}
+
+
+.checkNftCenter1 {
+    margin-top: 5rem;
+}
+
+.NftChecker1 {
+    margin-bottom: 2rem;
+}
+
+footer {
+    padding: 20px 15px 10px;
+    background-color: #060c1e;
+}
+
+.footerCenter {
+    width: 90%;
+    margin: .1px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerCenter p {
+    color: #f3f3f3;
+    text-align: center;
+}
