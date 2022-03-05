@@ -270,13 +270,15 @@ body {
 
     .Login button {
         width: unset;
-        padding: 8px 25px;
+        padding: 10px 45px;
         font-size: 15px;
     }
 
     .login .loginBtn {
         width: unset;
         font-size: 15px;
+        margin-right: 2rem;
+
     }
     .login .logoutBtn {
         width: unset;
