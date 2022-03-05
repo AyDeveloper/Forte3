@@ -170,5 +170,3 @@ document.querySelector("#EnsSubmit").onclick = checkEns;
 
 // Custom Contract Address for PAM 
 // 0x0403402d232f96FaeB67224C1eA68D715fFD8133
-// 0x9ae1e982Fc9A9D799e611843CB9154410f11Fe35
-// 0xb8c2C29ee19D8307cb7255e1Cd9CbDE883A267d5
