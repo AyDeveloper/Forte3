@@ -123,6 +123,9 @@ async function checkNft() {
         <p>Buy on these platforms <a href="https://opensea.io">Opensea</a>, <a href="https://rarible.com">Rarible</a> </p>
         </div>
       `
+      setTimeout(() => {
+        addOutcome.style.display = "none"
+      }, 5000);
   } else {
     addOutcome.innerHTML = `
       <div class="outCome">
@@ -130,6 +133,9 @@ async function checkNft() {
       <p>The NFT ecosystem is in very early stages. Buy more at <a href="https://opensea.io">Opensea</a>, <a href="https://rarible.com">Rarible</a> </p>
       </div>
     `
+    setTimeout(() => {
+      addOutcome.style.display = "none"
+    }, 5000);
   }
 }
 
@@ -152,7 +158,7 @@ async function checkEns() {
   console.log(resolve);
   console.log(resolve.name);
 
- 
+
     if(resolve.name) {
       addOutcome1.innerHTML = `
           <div class="outCome">
@@ -160,6 +166,9 @@ async function checkEns() {
           <p>Buy more Ethereum Name Service at <a href="https://ens.domains/">ENS</a>, <a href="https://unstoppabledomains.com">Unstoppable Domains</a> </p>
           </div>
         `
+        setTimeout(() => {
+          addOutcome.style.display = "none"
+        }, 5000);
     }
 
    
